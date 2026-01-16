@@ -30,6 +30,11 @@ By default, Unraid stores rclone configs in RAM, which vanish on reboot. Follow 
    rclone config
 
     ```
+   If you've already moved the config file off RAM and into persistent storage, you can still run config for the specific config file:
+   ```bash
+   rclone --config "/boot/config/plugins/rclone/rclone.conf" config
+   
+   ```
 
 3. Create a new remote named `dropbox-personal` (or your preferred name) and follow the OAuth login steps.
 4. **Crucial:** Move the config file to your flash drive so it survives reboots:
